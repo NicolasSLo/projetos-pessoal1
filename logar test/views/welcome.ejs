@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/statics/welcome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <title>Welcome</title>
+</head>
+
+<body>
+    <header>
+        <h2>User Page</h2>
+        <form action="/" method="get" id="form1">
+            <button class="LogOut" type="submit">
+                <img src="/statics/images/logout.png">
+            </button>
+        </form>
+    </header>
+
+    <div class="box">
+        <div class="box2">
+            <h1>Bem-vindo,</h1>
+            <h1 id="nome"><%= nome %></h1>
+        </div>
+        <button id="excluir_perfil">Excluir perfil</button>
+    </div>
+
+    <form onsubmit="window.location = /welcome/ +  nome.textContent; return false;" method="get" 
+    class="form_alert" id="form_alert">
+        
+    </form>
+    
+
+    <div class="blur" id="blur"></div>
+
+
+    <script src="/statics/welcome.js"></script>
+</body>
+
+</html>

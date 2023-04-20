@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            overflow-x: hidden;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background: rgb(54, 50, 54);
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+            row-gap: 20px;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            background: rgb(32, 29, 32);
+        }
+        header h1{
+            animation: blur 4s ease infinite;
+        }
+        @keyframes blur {
+            0%{
+                filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.412));
+            }
+            50%{
+                filter: drop-shadow(0 0 17px rgba(255, 255, 255, 0.412))
+            }
+            100%{
+                filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.412))
+            }
+        }
+        @keyframes appear {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 10;
+            }
+        }
+        input{
+            height: 20px;
+            width: 300px;
+            outline: none;
+            border-radius: 10px;
+            border: none;
+            padding: 5px 10px;
+        }
+        button{
+            border: solid 2px rgb(0, 199, 0);
+            border-radius: 10px;
+            padding: 10px;
+            width: 200px;
+            transition: 0.4s;
+            background: none;
+            color: white;
+            font-weight: bold;
+        }
+        button:hover{
+            width: 250px;
+            background: rgb(0, 199, 0);
+            cursor: pointer;
+            filter: drop-shadow(0 0 20px rgba(0, 199, 0, 0.472));
+        }
+        .box{
+            background: rgb(32, 29, 32);
+            border-radius: 10px;
+            padding: 20px;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            row-gap: 20px;
+            animation: appear 1s ease forwards;
+            animation-delay: 0.5s;
+            box-shadow: 5px 10px 5px 0 rgba(0,0,0,.5);
+        }
+        .result{
+            min-height: 20px;
+            padding: 20px;
+            background: rgb(32, 29, 32);
+            border-radius: 10px;
+            display: grid;
+            align-items: center;
+            justify-items: left;
+            row-gap: 20px;
+            animation: appear 1s ease forwards;
+            animation-delay: 0.5s;
+            box-shadow: 5px 10px 5px 0 rgba(0,0,0,.5);
+            font-size: 1.2em;
+        }
+        #sabor, #tamanho, #quantidade{
+            color: rgb(0, 199, 0);
+        }
+        .result div{
+            display: grid;
+            grid-template-columns: 2fr 1.5fr;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pizzas</h1>
+    </header>
+    <div class="box">
+        <h1>Pesquisar Pizza</h1>
+        <input type="text" id="input">
+        <button onclick="search()">Pesquisar</button>
+    </div>
+    <div class="result">
+        <div>
+            <p>Sabor:</p>
+            <p id="sabor"></p>
+        </div>
+        <div>
+            <p>Tamanho:</p>
+            <p id="tamanho"></p>
+        </div>
+        <div>
+            <p>Quantidade:</p>
+            <p id="quantidade"></p>
+        </div>
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>

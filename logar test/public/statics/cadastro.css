@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to right, #483146, #2b395b);
+    display: grid;
+    justify-items: center;
+    overflow-x: hidden;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.377);
+    text-align: center;
+    padding: 15px;
+    font-size: 1.8em;
+    color: white;
+    font-family: 'Handlee', cursive;
+    width: 100%;
+}
+
+.box {
+    background: rgba(0, 0, 0, 0.377);
+    display: grid;
+    width: 450px;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    justify-items: center;
+    row-gap: 20px;
+    font-family: arial;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 100px;
+}
+
+.box2 {
+    display: grid;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.377);
+    width: 450px;
+    padding: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.box2 button {
+    background: none;
+    color: white;
+    border: none;
+    transition: 0.15s;
+}
+
+.box2 button:hover {
+    cursor: pointer;
+    color: rgb(44, 255, 65);
+    filter: drop-shadow(0 0 5px rgba(44, 255, 65, 0.393));
+}
+
+input {
+    padding: 7px;
+    border: none;
+    background: none;
+    outline: none;
+    color: white;
+    border-bottom: solid white 1px;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    text-align: center;
+    font-family: 'Handlee', cursive;
+    color: rgba(255, 255, 255, 0.644);
+    font-size: 15px;
+}
+
+input:focus {
+    border-bottom: solid rgb(61, 224, 61) 1px;
+}
+
+input::-ms-reveal {
+    filter: invert(100%);
+}
+
+.ocupa {
+    z-index: 0;
+    background: white;
+    padding: 1px;
+    visibility: hidden;
+}
+
+p {
+    z-index: 1;
+    font-size: 13px;
+    margin-top: -30px;
+    color: red;
+}
+
+#btn_cadastro {
+    padding: 7px 13px;
+    background: none;
+    border: none;
+    color: white;
+    font-family: 'Handlee', cursive;
+    font-size: 18px;
+    border: solid orange 1px;
+    border-radius: 5px;
+    width: 110px;
+    transition: 0.4s;
+}
+
+#btn_cadastro:hover {
+    width: 185px;
+    background: orange;
+    filter: drop-shadow(0 0 15px orange);
+    cursor: pointer;
+}

@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+}
+body{
+    background: linear-gradient(to right, #483146, #2b395b);
+    display: grid;
+    justify-items: center;
+    overflow-x: hidden;
+    color: white;
+}
+header{
+    display: grid;
+    background: rgba(0, 0, 0, 0.377);
+    text-align: center;
+    padding: 15px;
+    font-size: 1.8em;
+    color: white;
+    font-family: 'Handlee', cursive;
+    width: 100%;
+}
+.LogOut{
+    position: absolute;
+    justify-self: left;
+    height: 57px;
+    left: 12px;
+    transition: 1s;
+    background: none;
+    border: none;
+}
+.LogOut:hover{
+    cursor: pointer;
+    background: orange;
+    border-radius: 7px;
+    filter: drop-shadow(0 0 15px orange);
+    border-radius: 50px;
+}
+#form1{
+    position: fixed;
+}
+.box{
+    margin-top: 150px;
+    font-family: arial;
+    display: grid;
+    text-align: center;
+    row-gap: 100px;
+}
+.box h1{
+    font-size: 4em;
+}
+.box button{
+    color: red;
+    font-size: 1.5em;
+    transition: 0.2s;
+    background: none;
+    border: none;
+}
+.box button:hover{
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 5px rgba(255, 0, 0, 0.585));
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.box2{
+    display: flex;
+    column-gap: 20px;
+}
+
+
+.box_alert{
+    display: grid;
+    background: rgba(0, 0, 0, 0.64);
+    padding: 10px;
+    row-gap: 40px;
+    border-radius: 5px;
+    z-index: 1;
+}
+.box_alert h1{
+    text-align: center;
+    font-family: Arial;
+    font-size: 2.5em;
+}
+.box_alert p{
+    font-family: Arial;
+    font-size: 1.4em;
+}
+.box_alert div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+}
+.n, .s{
+    background: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 1.1em;
+}
+
+.n{
+    border: solid red 1px;
+}
+.n:hover{
+    background: red;
+    cursor: pointer;
+}
+
+.s{
+    border: solid rgb(61, 224, 61) 1px;
+}
+.s:hover{
+    background: rgb(61, 224, 61);
+    cursor: pointer;
+}
+marquee{
+    font-family: 'Handlee', cursive;
+    color: orange;
+    filter: drop-shadow(0px 0px 5px rgba(255, 166, 0, 0.378));
+}
+
+.blur{
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* background: rgba(0, 0, 0, 0.597);
+    z-index: 1; */
+    z-index: -1;
+}
+.form_alert{
+    position: fixed;
+    top: 30%;
+    z-index: 2;
+}
+
+#nome{
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.519));
+}
+.box_alert{
+    animation: slide 1.8s ease forwards;
+}
+@keyframes slide {
+    0%{
+        transform: translateY(-400px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

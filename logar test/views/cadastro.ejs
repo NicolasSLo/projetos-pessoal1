@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/statics/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <h2>Cadastro</h2>
+    </header>
+
+    <form action="/login" method="post">
+
+        <div class="box">
+            <h2>Cadastro</h2>
+            <input type="text" placeholder="Nome de usuário" id="input_nome" name="name">
+            <input type="password" placeholder="Senha" id="input_senha" name="senha" onkeyup="alertaCor()">
+            <input type="password" placeholder="Confirme sua senha" id="input_senha2" name="senha2"
+                onkeyup="alertaCor()">
+            <div class="ocupa"></div>
+            <p id="txt_confirma" name="alerta">
+                <%= alerta %>
+            </p>
+            <button id="btn_cadastro" onclick="validaTudo()" type="submit"><strong>Cadastrar</strong></button>
+        </div>
+
+    </form>
+
+    <form action="/login" method="get">
+        <div class="box2">
+            <button>Já é cadastrado? Faça seu Login</button>
+        </div>
+    </form>
+
+
+    <script src="/statics/script.js"></script>
+</body>
+
+</html>
